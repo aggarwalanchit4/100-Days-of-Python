@@ -31,3 +31,32 @@ Student1 = Student()
 Person1 = Person()
 Person1.display()
 Student1.display()
+
+# -----------------------------------------
+# Challenge 3 — Overriding with Attributes
+# -----------------------------------------
+
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def display(self):
+        print(f"Employee : {self.name}")
+        print(f"Salary : {self.salary}")
+
+class Manager(Employee):
+    def display(self):
+        print(f"Manager : {self.name}")
+        print(f"Salary : {self.salary}")
+
+employee_name = input("Enter employee name: ")
+employee_salary = int(input("Enter employee salary: "))
+
+manager_name = input("Enter manager name: ")
+manager_salary = int(input("Enter manager salary: "))
+
+Employee1 = Employee(employee_name , employee_salary)
+Manager1 = Manager(manager_name , manager_salary)
+Employee1.display()
+Manager1.display()
