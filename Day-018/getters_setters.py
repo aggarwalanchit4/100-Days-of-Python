@@ -36,10 +36,11 @@ class Product:
 
 product = input("Enter name of product: ")
 price = int(input(f"Enter price of {product}: "))
-new_price = int(input("enter new price : "))
+
 product1 = Product(product, price)
 
 product1.display()
 print(product1.get_price())
+new_price = int(input("enter new price : "))
 product1.set_price(new_price)
-print(product1.set_price())
+print(product1.get_price())
