@@ -1,5 +1,5 @@
 # -----------------------------------------
-# Challenge 6 — Student Property Decorator
+# Challenge 1 — Student Property Decorator
 # -----------------------------------------
 
 class Student:
@@ -37,3 +37,4 @@ student1.marks = new_marks
 
 print("\nUpdated Details")
 student1.display()
+
