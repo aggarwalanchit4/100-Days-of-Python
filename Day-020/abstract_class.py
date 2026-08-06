@@ -1,31 +1,21 @@
 # -----------------------------------------
-# Day 19 Mini Project — Animal Sound Simulator
+# Abstract Class
 # -----------------------------------------
 
-class Animal:
-    def speak(self):
-        print("Animal makes a sound")
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+
+
 class Dog(Animal):
-    def speak(self):
-        print("DOG BARK's")
-class Cat(Animal):
-    def speak(self):
-        print("CAT MEOW's")
-class Lion(Animal):
-    def speak(self):
-        print("LION ROAR's")
 
-def animal_sound(animal):
-    animal.speak()
-
-animal1 = Animal()
-dog1 = Dog()
-cat1 = Cat()
-lion1 = Lion()
+    def sound(self):
+        print("Bark")
 
 
-animal_sound(animal1)
-animal_sound(dog1)
-animal_sound(cat1)
-animal_sound(lion1)
-
+dog = Dog()
+dog.sound()

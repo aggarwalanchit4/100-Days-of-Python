@@ -1,16 +1,26 @@
+# -----------------------------------------
+# Abstract Methods
+# -----------------------------------------
+
 from abc import ABC, abstractmethod
 
-class Animal(ABC):
+class Shape(ABC):
 
     @abstractmethod
-    def speak(self):
+    def area(self):
         pass
 
 
-class Dog(Animal):
-    def speak(self):
-        print("Dog barks")
+class Rectangle(Shape):
+
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+
+    def area(self):
+        return self.length * self.breadth
 
 
-dog1 = Dog()
-dog1.speak()
+rectangle = Rectangle(10, 5)
+
+print("Area =", rectangle.area())
